@@ -25,7 +25,7 @@ public class DisplayCalendars{
         // Pad space before the first day of the month
         int i = 0;
         for (i = 0; i < gregCal.get(Calendar.DAY_OF_WEEK); i++)
-            System.out.print(" ");
+            System.out.print("  ");
         
         for (i = 1; i <= gregCal.getActualMaximum(Calendar.DAY_OF_MONTH); i++){
             System.out.printf("%4d", i);
