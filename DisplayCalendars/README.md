@@ -20,33 +20,35 @@ My approach was to take the code that formatted the actual calendar and apply th
 GregorianCalendar classes to it. I studies the old code to see how it functioned and then thought
 of ways in which I could implement more efficient code. 
 
-```
-Give examples
-```
-
 ### Testing
 
-Step one: I needed to ensure I was able to recall the proper month according to the user's input.
-Professor Markley provided some basic code that help me determine the manner in which to approach this.
-
+Step one: 
 ```
-Step two: After I had the correct month, I had to obtain the maximum number of days within said month. 
+I needed to ensure I was able to recall the proper month according to the user's input.
+Professor Markley provided some basic code that help me determine the manner in which to approach this.
+```
+Step two: 
+```
+After I had the correct month, I had to obtain the maximum number of days within said month. 
 With the GregorianCalendar and Calendar classes, I did not have to worry about leap years since they
 accounted for that automatically. 
 ```
-
-Step three: I then had to populate the calendar and have it match up the day number with the day name. 
+Step three: 
+```
+I then had to populate the calendar and have it match up the day number with the day name. 
 I used the code that had already been provided, but at the time of implementation, for some reason, my
 code would not format the same, even though all the logic was correct. 
-
 ```
-Step four: I added the additional required output at the end of the program. I just reused code
+Step four: 
+```
+I added the additional required output at the end of the program. I just reused code
 from before to have it appear in the console. 
 ```
-
-End: At this point it was just a matter of feeding the numbers to the code and ensuring that
+End: 
+```
+At this point it was just a matter of feeding the numbers to the code and ensuring that
 the output matched what I had in my calendar. 
-
+```
 ## Notes
 
 I was not able to figure out the formatting for the day number to match up with its corresponding
