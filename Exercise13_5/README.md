@@ -1,4 +1,4 @@
-# Project Title
+# Enable GeometricObject comparable
 
 The purpose of this project was to implement and familiarize ourselves with the 
 Comparable interface. This project helped visualize how the Comparable interface
