@@ -13,7 +13,11 @@ public class Exercise13_5 {
         
         GeometricObject geoObject1 = new Circle(5);
         GeometricObject geoObject2 = new Rectangle(5,3);
+        
 
+        GeometricObject geoObject3 = new Circle(8);
+        GeometricObject geoObject4 = new Rectangle(8,5);
+        
         
         System.out.println("The two object have the same area?");
         
@@ -30,6 +34,18 @@ public class Exercise13_5 {
         // implements the max method
         
         System.out.println(GeometricObject.max(geoObject1, geoObject2));
+        
+        // displays the larger of two circles
+        
+        System.out.println("-----------------------");
+        System.out.println(GeometricObject.max(geoObject1, geoObject3));
+        System.out.println("-----------------------");
+        
+        // displays the larger of two rectangles
+        
+        System.out.println("-----------------------");
+        System.out.println(GeometricObject.max(geoObject2, geoObject4));
+        System.out.println("-----------------------");
     }
     
     // this method compares the area of two geometric objects
