@@ -1,9 +1,10 @@
-
+/*  
+*    Chris de Leon
+*    1/31/2023
+*    Geometric Objects Comparable 
+*/
 
 package com.mycompany.exercise13_5;
-/*  Chris de Leon
-    1/31/2023
-    Geometric Objects Comparable */
 
 public class Exercise13_5 {
 
@@ -12,6 +13,7 @@ public class Exercise13_5 {
         
         GeometricObject geoObject1 = new Circle(5);
         GeometricObject geoObject2 = new Rectangle(5,3);
+
         
         System.out.println("The two object have the same area?");
         
@@ -20,7 +22,6 @@ public class Exercise13_5 {
         
         // display rectangle
         displayGeometricObject(geoObject2);
-        
     }
     
     // this method compares the area of two geometric objects
