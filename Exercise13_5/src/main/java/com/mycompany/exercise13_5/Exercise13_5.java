@@ -22,6 +22,14 @@ public class Exercise13_5 {
         
         // display rectangle
         displayGeometricObject(geoObject2);
+        
+        // implements the comparable in main method
+        
+        System.out.println(geoObject1.compareTo(geoObject2));
+        
+        // implements the max method
+        
+        System.out.println(GeometricObject.max(geoObject1, geoObject2));
     }
     
     // this method compares the area of two geometric objects
