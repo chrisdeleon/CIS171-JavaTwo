@@ -6,7 +6,7 @@
 
 package com.mycompany.exercise13_5;
 
-public abstract class GeometricObject {
+public abstract class GeometricObject implements Comparable<GeometricObject> {
     
    
     private String color="white";
@@ -52,4 +52,16 @@ public abstract class GeometricObject {
     public abstract double getArea();
     
     public abstract double getPerimeter();
+    
+    // implements the comparable interface
+    
+    @Override public int compareTo(GeometricObject o){
+        return Double.compare(this.getArea(), o.getArea());
+    }
+    
+    // static max method that returns the larger of two GeometricObject objects
+    
+    public static double max(GeometricObject o1, GeometricObject o2){
+        return Math.max(o1.getArea(), o2.getArea());
+    }
 }
