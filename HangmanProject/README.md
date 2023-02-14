@@ -16,7 +16,8 @@ sections to create the basic outline of what the program will consist of.
 
 First, I stared blankly at my screen hoping that the code would miraculously appear. This did not last
 for very long because my programming duck gave me an unpleasant glare. Before I started typing any code,
-I deconstructed the image into ten different pieces. Doing this allowed me to 
+I deconstructed the image into ten different pieces. Doing this allowed me to get started on the programming 
+and testing of the project.
 
 ### Testing
 
