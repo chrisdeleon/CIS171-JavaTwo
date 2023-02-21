@@ -10,13 +10,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -29,8 +26,8 @@ public class RacingCar extends Application {
     
     // Car object must be instanciated outside of start in order for event handlers to function
     CarPane Car = new CarPane();
-
     
+    @Override
     public void start(Stage primaryStage) {
         HBox hBox = new HBox(5); // creates a horizonal box with some spacing
         
@@ -48,40 +45,51 @@ public class RacingCar extends Application {
         // adds a new car object and puts it in the center of the pane
         pane.setCenter(Car);
         
-        // adds event handlers to both buttons
+        // adds event handlers to both buttons for pausing and resuming
         btnPause.setOnAction(new pauseHandler());
         btnResume.setOnAction(new resumeHandler());
         
-        
         // creates a new scene with the pane and height/width of 800
         Scene scene = new Scene(pane, 600, 200);
-        
         primaryStage.setTitle("Racing Car");
         primaryStage.setScene(scene);
         primaryStage.show();
         
-        scene.setOnKeyPressed(e -> {
-            if (e.getCode() == KeyCode.UP){
-                Car.faster();
-            } else if (e.getCode() == KeyCode.DOWN){
-                Car.slower();
-            }
-        });
+        // event listener for speed adjusting
+        // for some reason, my program would not register the up and down arrow keys 
+        // so I used f for faster and s for slower as an alternative
+        scene.setOnKeyPressed(new speedHandler());
     }
     
     class pauseHandler implements EventHandler<ActionEvent> {
+        @Override
         public void handle(ActionEvent e){
             Car.pause();
         }
     }
     
     class resumeHandler implements EventHandler<ActionEvent> {
+        @Override
         public void handle(ActionEvent e){
             Car.resume();
         }
     }
     
-
+    class speedHandler implements EventHandler<KeyEvent> {
+        @Override
+        public void handle(KeyEvent e){
+            System.out.println(e);
+            System.out.println("key pressed");
+            switch (e.getCode()){
+                case UP:
+                case F: Car.faster();
+                    break;
+                case DOWN:
+                case S: Car.slower();
+                    break;
+            }
+        }
+    }
     public static void main(String[] args) {
         launch(args);
     }
@@ -89,7 +97,7 @@ public class RacingCar extends Application {
 
 class CarPane extends Pane {
     // creats instance of image view and specifies which file to display
-    private ImageView RaceCar = new ImageView(new Image("image/car.png"));
+    private final ImageView RaceCar = new ImageView(new Image("image/car.png"));
     
     // this variable is used with the move method to determine how far the car can travel before it returns to 0
     private double currentPosition = 0;
@@ -98,7 +106,7 @@ class CarPane extends Pane {
     private double Speed = 10;
     
     // timeline is declared here so that it can be paused in the event handlers
-    private Timeline animation = new Timeline(
+    private final Timeline animation = new Timeline(
         new KeyFrame(Duration.millis(100), e -> move()));
         
     // default constructor that formats the image to a more managable size
@@ -121,21 +129,29 @@ class CarPane extends Pane {
     // pauses the animation
     public void pause(){
         this.animation.pause();
+        System.out.println("Animation paused.");
     }
     
     // resumes the animation
     public void resume(){
         this.animation.play();
+        System.out.println("Animation resumed.");
     }
     
     // this method increase speed without a limit
     public void faster(){
         this.Speed += 2;
+        System.out.println("Speed increased. Your new speed is: " + this.Speed);
     }
     
     // this methods slows the car down unless it is already at the lowest speed, 2
     public void slower(){
-        this.Speed = this.Speed < 1 ? this.Speed = 2 : this.Speed - 2;
+        this.Speed = this.Speed <= 2 ? this.Speed = 2 : this.Speed - 2;
+        if(this.Speed == 2){
+            System.out.println("You are at the minimum speed: 2.0");
+        } else {
+            System.out.println("Speed decreased. Your new speed is: " + this.Speed);
+        }
     }
 }
 
