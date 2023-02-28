@@ -42,7 +42,7 @@ sure everything was aligned and looking good. I will also note here that I revie
 so that I could add column and row constraints to the grid. "By default, rows and columns will be sized to fit their content."
 ```
 
-Step three
+Step three:
 
 ```
 Now that everything was aligned properly, I had to add the functionality to the program. I started with the radio buttons since
@@ -51,7 +51,7 @@ implemented three different handlers for the three radio buttons, each with thei
 was able to achieve the dynamic aligning of the text field.
 ```
 
-Step four
+Step four:
 ```
 At this point, I needed to add the ability to resize the text field according to the user's input. I also needed to create a "safety 
 measure" for when a user did not enter a number. I accomplished this via a try-catch method. While I was navigating the try-catch
