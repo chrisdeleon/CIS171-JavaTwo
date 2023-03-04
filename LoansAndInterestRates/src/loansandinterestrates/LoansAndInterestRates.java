@@ -2,6 +2,7 @@ package loansandinterestrates;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -33,10 +34,11 @@ public class LoansAndInterestRates extends Application {
         GridPane pane = new GridPane();
         pane.setHgap(5.5);
         pane.setVgap(5.5);
+        pane.setAlignment(Pos.CENTER);
 
         // creates text area for calculation output
         TextArea calculationDisplay = new TextArea();
-        calculationDisplay.setText("Interest   Monthly Payment    Total Payment    \n");
+        calculationDisplay.setText("Interest\t\tMonthly Payment\t\tTotal Payment    \n");
 
         // text fields to grab data for calculation
         TextField amount = new TextField();
@@ -101,7 +103,7 @@ public class LoansAndInterestRates extends Application {
         // returns string with interest rate, monthly payment, and total payment
         public String getData() {
             // this took me longer to do than the rest of the project :(
-            return String.format("%-5.3s %s $%.2f %s $%.2f", this.interestRate, "\t\t", this.monthlyPayment, "\t\t\t", this.totalPayment);
+            return String.format("%-5.3f %s $%.2f %s $%.2f", this.interestRate, "\t\t", this.monthlyPayment, "\t\t\t\t", this.totalPayment);
         }
     }
 
