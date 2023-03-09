@@ -26,6 +26,7 @@ One Canadian dollar is 0.73 US. All good coding styles, conventions, and standar
 project in order to get full credit */
 
  /* Extra, as in, not required from this assignment, I added functionality to let the user choose which currency they want */
+
 public class Exam2 extends Application {
 
     @Override
@@ -104,7 +105,6 @@ public class Exam2 extends Application {
         // try-catch integrated for those that don't use numbers :)
         CalculateBtn.setOnAction((ActionEvent event) -> {
             try {
-                System.out.println("Convert clicked");
                 // if US radio button is selected
                 if (ConvertUS.isSelected()) {
                     UStxtField.setText(Operations.divide(Double.parseDouble(CANtxtField.getText())));
@@ -119,12 +119,10 @@ public class Exam2 extends Application {
                 UStxtField.setText("0");
                 CANtxtField.setText("0");
             }
-
         });
 
         // adds action listener to clear data when clicked
         ClearBtn.setOnAction((ActionEvent) -> {
-            System.out.println("Clear button clicked");
             UStxtField.setText("0");
             CANtxtField.setText("0");
         });
@@ -139,7 +137,7 @@ public class Exam2 extends Application {
 
         // sets the scene, adds the pane to the scene, displays the stage with all elements added
         Scene scene = new Scene(pane, 400, 250);
-        primaryStage.setTitle("US and CAN Money Converted");
+        primaryStage.setTitle("Currency Converter");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
