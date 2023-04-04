@@ -16,10 +16,10 @@ results.
 
 ### Design
 
-At first, I thought the design would be simple, but boy was I in for a treat. This is what it turned out to be in the end.
+At first, I thought the design would be simple, but boy was I in for a treat. This is what the design turned out to be in the end:
 I had to remove excess code from the algorithms so that each one would be evaluated equally. I also had to figure out
 how to print all the results. Another thing I had to do was make sure that they could all work within one method, although, 
-now that I think about it, I could have made each of them their own method, but there's no fun in that :)
+now that I think about it, I could have made each of them their own method.
 
 ### Testing
 
@@ -45,7 +45,7 @@ people.
 Step three:
 
 ```
-Now that the times are calculate and the algorithms are running, I just had to put it all into a little, cute table 
+Now that the times are calculated and the algorithms are running, I just had to put it all into a little, cute table 
 and call it a day, right? Wrong. This cute, little table cost me several hours of my day troubleshooting and reformatting. 
 I was not able to get the times to appear exactly how I wanted them to appear in the exact position they needed to appear. 
 I unfortunately was not able to complete that section properly. With that said, I did provide a type of alternate 
