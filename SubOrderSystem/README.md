@@ -4,7 +4,11 @@ Build an automated ordering system for Subway. It will use a GUI to interact wit
 
 ## Example Output
 
-![Sample Output](README.jpg)(FirstView.jpg)(SecondView.jpg)(ThirdView.jpg)(SummaryView.jpg)
+![Sample Output](README.jpg)
+![Sample Output](FirstView.jpg)
+![Sample Output](SecondView.jpg)
+![Sample Output](ThirdView.jpg)
+![Sample Output](SummaryView.jpg)
 
 ## Analysis Steps
 
